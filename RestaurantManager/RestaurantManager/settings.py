@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'FoodApp',  # Qui aggiunto per riconoscere la 'Food App' come una delle app installate nel progetto.
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
