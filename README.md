@@ -7,7 +7,7 @@ Python Code Test
   
 <li>To use project, first create new virtual environment using Add interpreter (Pycharm) or use "python -m venv .venv" in the terminal for Vscode</li>
 
-<li>Then open up terminal and use <b>pip install -r requirements.txt</b> to install all dependencies (Note: There are no dependencies at the moment for this project)</li>
+<li>Then open up terminal and use <b>pip install -r requirements.txt</b> to install all dependencies</li>
 
 <li>In the terminal in the main project directory use "127.0.0.1:8000/admin" or use "localhost:8000/admin" to access admin page.</li>
     <ul>
