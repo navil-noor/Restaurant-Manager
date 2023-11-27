@@ -1,3 +1,5 @@
+# Questo file viene utilizzato per eseguire i contenitori Docker per il progetto Django
+
 version: '3'
 
 services:

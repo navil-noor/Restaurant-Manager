@@ -1,23 +1,17 @@
 """
-URL configuration for RestaurantManager project.
+Configurazione URL per il progetto Restaurant Manager.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+Tutti gli URL del progetto sono definiti di seguito. Questo è il punto di ingresso
+principale di il progetto Restaurant Manager.
+
 """
 from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    # configurazione per l'amministratore principale situato su localhost:8000/admin o 127.0.0.1:8000/admin
     path('admin/', admin.site.urls),
+    # La funzione include viene utilizzata per aggiungere altri file urls.py, dalla FoodApp
     path('api/', include('FoodApp.urls')),
 ]
+

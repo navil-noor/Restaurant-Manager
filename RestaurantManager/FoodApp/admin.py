@@ -1,5 +1,4 @@
-# restaurant/admin.py
-
+# registrare i modelli affinché siano accessibili tramite l'interfaccia di amministrazione
 from django.contrib import admin
 from .models import Restaurant, Recipe, Ingredient
 
