@@ -1,7 +1,42 @@
-# registrare i modelli affinché siano accessibili tramite l'interfaccia di amministrazione
 from django.contrib import admin
-from .models import Restaurant, Recipe, Ingredient
+from .models import Ingredient, Recipe, Restaurant
 
-admin.site.register(Restaurant)
-admin.site.register(Recipe)
-admin.site.register(Ingredient)
+
+@admin.register(Recipe)
+class RecipeAdmin(admin.ModelAdmin):
+    list_display = ('name', 'display_ingredients', 'display_restaurants')
+
+    def display_ingredients(self, obj):
+        return ", ".join([ingredient.name for ingredient in obj.ingredients.all()])
+
+    display_ingredients.short_description = 'Ingredients'
+
+    def display_restaurants(self, obj):
+        return ", ".join([restaurant.name for restaurant in obj.restaurants.all()])
+
+    display_restaurants.short_description = 'Restaurants'
+
+
+@admin.register(Restaurant)
+class RestaurantAdmin(admin.ModelAdmin):
+    list_display = ('name', 'display_recipes')
+
+    def display_recipes(self, obj):
+        return ", ".join([recipe.name for recipe in obj.recipes.all()])
+
+    display_recipes.short_description = 'Recipes'
+
+
+@admin.register(Ingredient)
+class IngredientAdmin(admin.ModelAdmin):
+    list_display = ('name', 'display_recipes', 'display_restaurants')
+
+    def display_recipes(self, obj):
+        return ", ".join([recipe.name for recipe in obj.recipes.all()])
+
+    display_recipes.short_description = 'Recipes'
+
+    def display_restaurants(self, obj):
+        return ", ".join([restaurant.name for recipe in obj.recipes.all() for restaurant in recipe.restaurants.all()])
+
+    display_restaurants.short_description = 'Restaurants'

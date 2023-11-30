@@ -15,7 +15,7 @@ class Ingredient(models.Model):
 # Modello di ricetta che può essere composto da più ingredienti (ManyToManyField).
 class Recipe(models.Model):
     name = models.CharField(max_length=255)
-    ingredients = models.ManyToManyField(Ingredient,related_name='recipes')
+    ingredients = models.ManyToManyField(Ingredient, related_name='recipes')
 
     def __str__(self):
         return self.name
