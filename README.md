@@ -15,6 +15,8 @@ Python Code Test
       pass: 123456
     </ul>
 
+<li>To use test data use command: python manage.py loaddata db_dump.json</li>
+
 <hr>
 
 <li>To run Docker container start Docker Desktop. From terminal first: "docker-compose build" and then: "docker-compose up".</li>
