@@ -17,6 +17,15 @@ Python Code Test
 
 <li>To use test data use command: python manage.py loaddata db_dump.json</li>
 
+<li>To see API documentation use the link: http://127.0.0.1:8000/docs/</li>
+
+<li>API Endpoints:</li>
+  <ul>
+    http://127.0.0.1:8000/api/restaurants/ <br>
+    http://127.0.0.1:8000/api/recipes/  <br>
+    http://127.0.0.1:8000/api/ingredients/
+  </ul>
+
 <hr>
 
 <li>To run Docker container start Docker Desktop. From terminal first: "docker-compose build" and then: "docker-compose up".</li>
