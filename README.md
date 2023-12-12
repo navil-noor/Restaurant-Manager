@@ -1,5 +1,5 @@
 # Restaurant-Manager
-Python Code Test
+Django Admin Site - Entities containing Ingredients, Recipes, Restaurants
 
 <h3>To Do:</h3>
 
